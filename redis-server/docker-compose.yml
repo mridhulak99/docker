@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  redis-server:
+    image: 'redis'
+    container_name: redisdb
+  node-app:
+    build: .
+    ports:
+      - "8081:8081"
+    container_name: nodejs
